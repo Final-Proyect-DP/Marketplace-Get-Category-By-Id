@@ -1,0 +1,32 @@
+# app/swagger_config.yaml
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Get Categories API"
+  description: "API to get categories from the database"
+paths:
+  /categories/{id}:
+    get:
+      description: "Get category by ID"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          type: "integer"
+      responses:
+        200:
+          description: "Successfully fetched category"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              category:
+                type: "object"
+                properties:
+                  id:
+                    type: "integer"
+                  name:
+                    type: "string"
+        404:
+          description: "Category not found"
