@@ -98,4 +98,4 @@ jobs:
               -p 5000:5000 \
               --restart unless-stopped \
               fernando785/marketplace-get-category-by-id:latest
-            sudo docker system prune -af --volumes || true 
+            sudo docker system prune -af --volumes || true   
