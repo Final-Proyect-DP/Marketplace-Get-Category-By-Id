@@ -64,7 +64,7 @@ jobs:
 
       - name: Add Host to Known Hosts
         run: |
-          mkdir -p ~/.ssh
+          mkdir -p ~/.ssh 
           ssh-keyscan -H ${{ matrix.ec2_instance }} >> ~/.ssh/known_hosts
 
 
