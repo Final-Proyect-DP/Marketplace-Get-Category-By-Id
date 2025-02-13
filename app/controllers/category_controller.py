@@ -10,3 +10,11 @@ def get_category_by_id(id):
         return jsonify({"message": "Category not found"}), 404
 
     return jsonify({"message": "Category fetched successfully", "category": category.to_dict()}), 200
+
+
+
+@category_bp.route('/health', methods=['GET'])
+def health_check():
+    return jsonify(status='OK', service='user-read'), 200
+
+
