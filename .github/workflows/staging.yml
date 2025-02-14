@@ -99,3 +99,4 @@ jobs:
               --restart unless-stopped \
               fernando785/marketplace-get-category-by-id:latest
             sudo docker system prune -af --volumes || true   
+            
